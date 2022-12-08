@@ -1,2 +1,0 @@
-# sudhanshusakhala.github.io
-CV
