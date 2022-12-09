@@ -125,7 +125,6 @@ header.shadow {
     width: 100%;
 } */
 
-
 .home-text span {
     font-size: var(--medium-font);
     font-weight: 500;
@@ -267,20 +266,28 @@ span {
     border-radius: 0.5rem;
 }
 
-.html-bar {
-    width: 94%;
+.web-bar {
+    width: 65%;
 }
 
-.css-bar {
-    width: 84%;
+.python-bar {
+    width: 82%;
 }
 
-.js-bar {
-    width: 74%;
+.ml-bar {
+    width: 68%;
 }
 
-.react-bar {
+.dbms-bar {
+    width: 70%;
+}
+
+.java-bar {
     width: 80%;
+}
+
+.auto-bar {
+    width: 59%;
 }
 
 .services-content {
