@@ -125,9 +125,14 @@ header.shadow {
     width: 100%;
 } */
 
+
 .home-text span {
     font-size: var(--medium-font);
     font-weight: 500;
+}
+
+.home-text h3 span {
+    color: green;
 }
 
 .home-text h1 {
