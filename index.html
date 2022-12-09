@@ -16,45 +16,6 @@
 
     <section class='header' id='section'>
 
-        <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            //linking variables 
-
-            $name  = $_POST['name'];
-            $email  = $_POST['email'];
-            $message = $_POST['message'];
-
-            //connecting to database
-
-            $servername  = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "clients";
-
-            $dbconn = mysqli_connect($servername, $username, $password, $database);
-
-            // if (!$dbconn) {
-            //   echo "not connected !!";
-            // } else {
-            //   echo "connected!!";
-            // }
-
-            $sql = "INSERT INTO `detail` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
-            $result = mysqli_query($dbconn, $sql);
-
-            if ($result) {
-                echo '<div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">sent!</h4>
-      <p>Thank you for contacting me.</p>
-      <hr>
-      
-    </div>';
-            } else {
-                echo "not inserted !";
-                echo " " . mysqli_error($dbconn);
-            }
-        }
-        ?>
             <!-- navbar -->
             <header>
                 <!-- <a href="#" class="logo"></a> -->
