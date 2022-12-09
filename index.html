@@ -14,72 +14,7 @@
 
 <body>
 
-    <section class='header' id='section'>
-
-        <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            //linking variables 
-
-            $name  = $_POST['name'];
-            $email  = $_POST['email'];
-            $message = $_POST['message'];
-
-            //connecting to database
-
-            $servername  = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "clients";
-
-            $dbconn = mysqli_connect($servername, $username, $password, $database);
-
-            // if (!$dbconn) {
-            //   echo "not connected !!";
-            // } else {
-            //   echo "connected!!";
-            // }
-
-            $sql = "INSERT INTO `detail` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
-            $result = mysqli_query($dbconn, $sql);
-
-            if ($result) {
-                echo '<div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">sent!</h4>
-      <p>Thank you for contacting me.</p>
-      <hr>
-      
-    </div>';
-            } else {
-                echo "not inserted !";
-                echo " " . mysqli_error($dbconn);
-            }
-        }
-        ?>
-            <!-- navbar -->
-            <header>
-                <!-- <a href="#" class="logo"></a> -->
-
-                <div class="bx bx-menu" id="menu-icon"></div>
-
-                <ul class="navbar">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <div class="bx bx-moon" id="darkmode"></div>
-                </ul>
-                <?php
-            session_start();                                //session start
-            if (isset($_SESSION['count']))                   //setting session for count
-                $_SESSION['count'] = $_SESSION['count'] + 1;        //
-            else
-                $_SESSION['count'] = 1;
-            echo "<h3>You have visited </h3>" . $_SESSION['count'] . " Times";
-            ?><br>
-            </header>
-    </section>
+    
     <!-- Home -->
 
 
@@ -275,12 +210,6 @@
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Send</button>
             </form>
         </div>
-
-        <!-- echo '<div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Details recieved!</h4>
-      <p>Hold on, my PA : Shambhawi Sharma will contact you ASAP.</p>
-      <hr>
-    </div>'; -->
     </section>
 
     <!-- Footer -->
