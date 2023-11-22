@@ -267,24 +267,28 @@ span {
     border-radius: 0.5rem;
 }
 
-.web-bar {
-    width: 75%;
+.back-bar {
+    width: 80%;
 }
 
 .python-bar {
-    width: 79%;
+    width: 75%;
 }
 
 .ml-bar {
-    width: 85%;
-}
-
-.dbms-bar {
     width: 70%;
 }
 
+.dbms-bar {
+    width: 780%;
+}
+
 .java-bar {
-    width: 75%;
+    width: 90%;
+}
+
+.javascript-bar{
+    width: 85%
 }
 
 
