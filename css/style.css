@@ -272,14 +272,14 @@ span {
 }
 
 .python-bar {
-    width: 85%;
-}
-
-.data-eng-bar {
     width: 75%;
 }
 
-.db-bar {
+.ml-bar {
+    width: 70%;
+}
+
+.dbms-bar {
     width: 80%;
 }
 
