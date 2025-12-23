@@ -320,15 +320,102 @@
     
     
     <section class="contact" id="contact">
-        <div class="contact-form ">
-            <form action="https://app.headlessforms.cloud/api/v1/form-submission/uRscuHyiwD" method="POST">
-                <input type="text " placeholder="Your Name " name="name">
-                <input type="email " id=" " placeholder="Your Email " name="email">
-                <textarea name="message" id=" " cols="30 " rows="10 " placeholder="Write Message Here... "></textarea>
-                <!-- <input type="button " value="Send " class="contact-button "> -->
-                <button class="w-100 btn btn-lg btn-primary">Send</button>
-            </form>
-        </div>
+        <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Sudhanshu</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+    }
+
+    header {
+      background: #1f2933;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #25D366;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1ebe5d;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Contact Sudhanshu Sakhala</h1>
+  <p>Message me directly on WhatsApp</p>
+</header>
+
+<div class="contact-box">
+  <input type="text" id="name" placeholder="Your Name" />
+  <textarea id="message" placeholder="Your Message"></textarea>
+  <button onclick="sendWhatsApp()">Send on WhatsApp</button>
+
+  <div class="back">
+    <a href="index.html">⬅ Back to Team</a>
+  </div>
+</div>
+
+<script>
+  function sendWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const msg = document.getElementById("message").value.trim();
+
+    if (!name || !msg) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const phoneNumber = "+91-7744869769"; // 🔴 PUT YOUR NUMBER HERE
+    const text = `Hello, I am ${name}.%0A%0A${msg}`;
+    window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+  }
+</script>
 
     </section>
     
@@ -364,3 +451,4 @@
 
 
 </html>
+
