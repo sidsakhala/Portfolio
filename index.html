@@ -7,23 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudhanshu Sakhala</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- Box Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <!-- Header / Navbar -->
-    <header class="header" id="section">
+    <!-- Header & Navbar -->
+    <header class="header" id="header">
+        <div class="logo">Sudhanshu Sakhala</div>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
             <div class="bx bx-moon" id="darkmode"></div>
         </ul>
@@ -45,19 +44,13 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="heading">
-            <h2>About Me</h2>
-            <span>Introduction</span>
-        </div>
-        <p class="bio">
-            Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure.
-            Skilled in Terraform, Azure, GCP, and Linux networking. Proficient in automation, CI/CD pipelines, proactive system monitoring,
-            and network troubleshooting with tools like tcpdump, netstat, and Wireshark. Passionate about reducing operational friction,
-            optimizing cloud resources, and driving continuous improvement in system reliability and resilience.
+        <h2>About Me</h2>
+        <p>
+            Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure. Skilled in Terraform, Azure, GCP, and Linux networking. Proficient in network analysis and troubleshooting with tools like tcpdump, netstat, and Wireshark. Passionate about reducing operational friction, optimizing cloud resources, and driving continuous improvement in system reliability.
         </p>
     </section>
 
-    <!-- Bio / Info Section -->
+    <!-- Bio Section -->
     <section class="bio" id="bio">
         <div class="information">
             <div class="info-box"><i class='bx bx-calendar'></i><span>23-03-2002</span></div>
@@ -66,87 +59,69 @@
             <div class="info-box"><i class='bx bxs-graduation'></i><span>MCA</span></div>
             <div class="info-box"><i class='bx bxs-conversation'></i><span>sudhanshu.sakhala2002@gmail.com</span></div>
         </div>
-
-        <!-- Download Resume -->
-        <div class="resumo_fn_cv_btn">
-            <a href="Sudhanshu_sakhala.pdf" download>
-                <button type="button" class="btn btn-outline-info">
-                    Download My Resume
-                    <i class='bx bxs-download'></i>
-                </button>
-            </a>
-        </div>
+        <a href="Sudhanshu_sakhala.pdf" download class="btn">Download My Resume <i class='bx bxs-download'></i></a>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <div class="heading">
-            <h2>Skills</h2>
-            <span>The domains in which I work</span>
-        </div>
+        <h2>Skills</h2>
+        <p>The domains in which I work</p>
+
         <div class="skills-container">
-            <div class="bars">
-                <div class="bars-box">
-                    <h3>Cloud Computing (GCP/Azure)</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar back-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>Infrastructure as Code (Terraform)</h3>
-                    <span>75%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar python-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>Automation & Scripting</h3>
-                    <span>70%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar ml-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>Linux & Networking</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar dbms-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>Dynatrace & Splunk</h3>
-                    <span>90%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar java-bar"></div>
-                </div>
-                <div class="bars-box">
-                    <h3>Containerization & Orchestration</h3>
-                    <span>85%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar javascript-bar"></div>
+            <div class="skill">
+                <h3>Cloud Computing (GCP/Azure)</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
                 </div>
             </div>
-            <div class="skills-img">
-                <img src="123.png" alt="Skills Image">
+            <div class="skill">
+                <h3>Infrastructure as Code (Terraform)</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Automation & Scripting</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Linux & Networking</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Dynatrace & Splunk</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Containerization & Orchestration</h3>
+                <div class="bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <div class="heading">
-            <h2>Services</h2>
-            <span>My Services</span>
-        </div>
-        <div class="services-content">
-            <div class="services-box">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>Cloud Infrastructure & Automation</h3>
                 <a href="#">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="service-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>CI/CD Pipeline Engineering</h3>
                 <a href="#">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="service-box">
                 <i class='bx bx-server'></i>
                 <h3>Cloud-Native Application Deployment</h3>
                 <a href="#">Learn More</a>
@@ -156,39 +131,35 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="heading">
-            <h2>Contact</h2>
-            <span>Connect with me</span>
-        </div>
-        <div class="contact-form">
+        <h2>Contact</h2>
+        <div class="contact-info">
             <div class="info-box"><i class='bx bxs-user'></i><span>Sudhanshu Sakhala</span></div>
             <div class="info-box"><i class='bx bxs-phone'></i><span>+91-7744869769</span></div>
             <div class="info-box"><i class='bx bxs-conversation'></i><span>sakhalasudhanshu@gmail.com</span></div>
             <div class="info-box"><i class='bx bxs-map'></i><span>Kothrud, Pune</span></div>
+        </div>
 
-            <input type="text" id="name" placeholder="Your Name" />
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
             <textarea id="message" placeholder="Your Message"></textarea>
             <button onclick="sendWhatsApp()">Send on WhatsApp</button>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1470.2437970783674!2d74.72778153826765!3d19.102933530035127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb1da38fb7de1%3A0xa0825b981082b980!2sArabella%20By%20Marc!5e1!3m2!1sen!2sin!4v1766568452315!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <h2>Reach to me</h2>
+        <h2>Reach out to me</h2>
         <div class="footer-social">
             <a href="https://www.facebook.com/profile.php?id=100007208868447"><i class='bx bxl-facebook'></i></a>
             <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
         </div>
-        <p class="copyright">Created by <a href="https://instagram.com/sudhanxu__">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
+        <p>Created by <a href="https://instagram.com/sudhanxu__">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
     </footer>
 
-    <!-- JS -->
-    <script src="./js/script.js"></script>
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
     <script>
-        // Typed.js Auto Type
         var typed = new Typed(".auto-type", {
             strings: ["A Software Development Engineer", "A Cloud DevOps Engineer", "A Site Reliability Engineer"],
             typeSpeed: 50,
@@ -196,20 +167,15 @@
             loop: true
         });
 
-        // WhatsApp Form
         function sendWhatsApp() {
             const name = document.getElementById("name").value.trim();
             const msg = document.getElementById("message").value.trim();
-            if (!name || !msg) {
-                alert("Please fill all fields");
-                return;
-            }
-            const phoneNumber = "+917744869769";
+            if (!name || !msg) return alert("Please fill all fields");
+            const phone = "+917744869769";
             const text = `Hello, I am ${name}.%0A%0A${msg}`;
-            window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+            window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
         }
     </script>
-
 </body>
 
 </html>
