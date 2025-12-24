@@ -78,6 +78,35 @@ header {
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #25D366;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1ebe5d;
+    }
+
 header.shadow {
     box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
@@ -587,4 +616,5 @@ form textarea {
         margin-left: 25%;
     }
 }
+
 
