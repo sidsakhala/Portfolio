@@ -1,192 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudhanshu Sakhala Portfolio</title>
-  
-  <!-- Box Icons -->
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* --- Reset & Root --- */
-    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-    :root {
-      --main-color: #033a80;
-      --accent-color: #22cf91;
-      --bg-color: #f4f6f8;
-      --text-color: #0f0c27;
-      --hover-color: #0251a0;
-      --big-font: 3rem;
-      --medium-font: 1.5rem;
-    }
-
-    body {background: var(--bg-color); color: var(--text-color); scroll-behavior: smooth;}
-    a {text-decoration: none; color: inherit;}
-    h1,h2,h3 {margin:0;}
-    section {padding: 80px 10%;}
-    .heading {text-align:center; margin-bottom:40px;}
-    .heading h2 {font-size:2rem; margin-bottom:10px;}
-    .heading span {color: var(--accent-color); font-size:1rem;}
-
-    /* --- Header --- */
-    header {
-      position: fixed; top:0; width:100%; z-index:1000;
-      background: #fff; display:flex; justify-content:space-between; align-items:center;
-      padding:15px 10%; box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-    .logo {font-weight:600; font-size:1.5rem;}
-    .navbar {display:flex; gap:20px;}
-    .navbar a {padding:10px 15px; font-weight:500; transition:0.3s;}
-    .navbar a:hover {color: var(--hover-color);}
-    #menu-icon {display:none; font-size:24px; cursor:pointer;}
-
-    /* --- Home --- */
-    .home {display:flex; flex-direction:column; align-items:center; text-align:center; min-height:80vh; justify-content:center;}
-    .home h1 {font-size: var(--big-font);}
-    .home h2 {font-size: var(--medium-font); margin:15px 0;}
-    .home .btn {padding:10px 20px; background: var(--main-color); color:#fff; border-radius:5px; transition:0.3s;}
-    .home .btn:hover {background: var(--hover-color);}
-    .social {display:flex; gap:15px; margin-bottom:20px;}
-    .social a {font-size:28px; color:var(--text-color);}
-    .social a:hover {color: var(--hover-color);}
-
-    /* --- About --- */
-    .about p {max-width:700px; margin:0 auto; line-height:1.6; text-align:center;}
-
-    /* --- Skills --- */
-    .skills-container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:40px;}
-    .skill {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.05);}
-    .skill h3 {margin-bottom:10px; font-size:1.1rem;}
-    .bar {background:#ddd; height:10px; border-radius:5px; overflow:hidden;}
-    .progress {height:100%; width:0; border-radius:5px; background: var(--main-color); animation: fillBar 2s forwards;}
-    @keyframes fillBar {from{width:0;} to{width:var(--width);}}
-
-    /* --- Services --- */
-    .services-container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:40px;}
-    .service-box {background:#fff; padding:20px; border-radius:10px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.05); transition:0.3s;}
-    .service-box:hover {transform:translateY(-5px); background:var(--main-color); color:#fff;}
-    .service-box .bx {font-size:40px; margin-bottom:10px; transition:0.3s;}
-    .service-box:hover .bx {color: var(--accent-color);}
-    .service-box h3 {margin-bottom:10px; font-size:1.1rem;}
-    .service-box a {font-weight:500; color:var(--main-color); transition:0.3s;}
-    .service-box:hover a {color:#fff;}
-
-    /* --- Contact --- */
-    .contact-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-    .contact-form input, .contact-form textarea {padding:12px; border-radius:8px; border:1px solid #ccc; outline:none;}
-    .contact-form button {padding:12px; background:#25D366; color:#fff; border:none; border-radius:8px; cursor:pointer; transition:0.3s;}
-    .contact-form button:hover {background:#1ebe5d;}
-
-    /* --- Footer --- */
-    footer {background:#1f2933; color:#fff; text-align:center; padding:40px 10%; margin-top:40px;}
-    footer .footer-social a {margin:0 10px; color:#fff; font-size:25px;}
-    footer .footer-social a:hover {color: var(--accent-color);}
-    footer p {margin-top:15px; color:#aaa;}
-
-    /* --- Responsive --- */
-    @media(max-width:768px){.navbar{display:none;} #menu-icon{display:block;}}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu Sakhala</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo"></div>
-    <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <section class='header' id='section'>
 
-  <!-- Home -->
-  <section class="home" id="home">
-    <div class="social">
-      <a href="https://github.com/sidsakhala"><i class='bx bxl-github'></i></a>
-      <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
+            <!-- navbar -->
+            <header>
+                <!-- <a href="#" class="logo"></a> -->
+
+                <div class="bx bx-menu" id="menu-icon"></div>
+
+                <ul class="navbar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="bx bx-moon" id="darkmode"></div>
+                </ul>
+                <br>
+            </header>
+    </section>
+    <!-- Home -->
+
+
+
+    <!-- <a href="#"><i class='bx bxl-dribbble' ></i></a> -->
+    <!-- <div class="home-img">
+            <img src="" alt="">
+        </div> -->
+    <section class="home" id="home">
+
+        <div class="social"><br>
+            <a href="https://github.com/sidsakhala"><i class='bx bxl-github'></i></a>
+            <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
+        </div>
+
+        <div class="home-text">
+
+            <h1>Sudhanshu Sakhala</h1>
+            <h2>Hello, I'm <span class="auto-type"></span>
+            </h2><br><br><br>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+    </section>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="heading ">
+            <h2>About Me</h2><br>
+            <span>Introduction</span><br>
+        </div>
+        <!-- About Content -->
+        <div class="about1">
+            <!-- <div class="about-img ">
+                <img src=" " alt=" ">
+            </div> 
+             <div class="about-text "> -->
+            <br>
+            <p class="bio ">Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure. Skilled in Terraform, Azure, GCP, and Linux networking, I leverage expertise in infrastructure automation, CI/CD pipelines, and proactive system monitoring to ensure optimal performance and availability. Proficient in network analysis and troubleshooting with tools like tcpdump, netstat, and Wireshark. I am passionate about reducing operational friction, optimizing cloud resources, and driving continuous improvement in system reliability and resilience.
+</p>
+
+            <!-- </div>  -->
+        </div>
+
+    </section>
+
+    <section class="bio" id="bio">
+
+        <div class="information ">
+
+
+            <div class="info-box ">
+                <i class='bx bx-calendar'></i>
+                <span>23-03-2002</span>
+            </div>
+
+            <div class="info-box ">
+                <i class='bx bxs-phone'></i>
+                <span>+91-7744869769</span>
+            </div>
+            <!-- Box 3 -->
+
+            <div class="info-box ">
+                <i class='bx bxs-map'></i>
+                <span>Pune, India</span>
+            </div>
+
+            <div class="info-box ">
+                <i class='bx bxs-graduation'></i>
+                <span>MCA</span>
+            </div>
+
+            <div class="info-box ">
+                <i class='bx bxs-conversation'></i>
+                <span>sudhanshu.sakhala2002@gmail.com</span>
+            </div>
+
+
+        </div>
+
+
+        <!-- Download CV Button -->
+        <div class="resumo_fn_cv_btn ">
+            <a href="Sudhanshu_sakhala.pdf " download>
+                <br>
+                <button type="button" class="btn btn-outline-info">Download My Resume<span><div class="info-box "><i class='bx bxs-download'></i>
+                    <!-- <span>sakhalasudhanshu@gmail.com</span> -->
+                </div></span></button>
+            </a>
+        </div>
+        <!-- <a href="# " class="btn ">Download Cv</a> -->
+    </section>
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="heading ">
+            <h2>Skills</h2>
+            <span>The domains in which i work</span>
+        </div>
+        <!-- Skills Content -->
+        <div class="skills-container">
+            <div class="bars ">
+
+               <!-- Box 1-->
+                <div class="bars-box ">
+                    <h3>Cloud Computing (GCP/Azure)</h3>
+                    <span>80%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar back-bar "></div>
+                </div>
+                <!-- Box 2 -->
+                <div class="bars-box ">
+                    <h3>Infrastructure as Code (Terraform)</h3>
+                    <span>75%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar python-bar "></div>
+                </div>
+                <!-- Box 3 -->
+                <div class="bars-box ">
+                    <h3>Automation & Scripting</h3>
+                    <span>70%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar ml-bar "></div>
+                </div>
+                <!-- Box 4 -->
+                <div class="bars-box ">
+                    <h3>Linux & Networking</h3>
+                    <span>80%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar dbms-bar "></div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="bars-box ">
+                    <h3>Dynatrace & Splunk</h3>
+                    <span>90%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar java-bar "></div>
+                </div>
+
+                 <!-- Box 6-->
+                <div class="bars-box ">
+                    <h3>Containerization & Orchestration</h3>
+                    <span>85%</span>
+                    <div class="light-bar "></div>
+                    <div class="percent-bar javascript-bar "></div>
+                </div>
+
+            </div>
+            <div class="skills-img ">
+                <img src="123.png " alt=" ">
+            </div>
+        </div>
+
+    </section>
+
+<!--     Services --> 
+     <section class="services" id="services">
+        <div class="heading ">
+            <h2>Services</h2>
+            <span>My Services</span>
+        </div>
+        <div class="services-content ">
+            <!-- Box 1 -->
+          <div class="services-box ">
+                <i class='bx bx-code-alt'></i>
+                <h3>Cloud Infrastructure & Automation</h3>
+                <a href="# ">Learn More</a>
+            </div>
+
+            <div class="services-box ">
+                <i class='bx bx-code-alt'></i>
+                <h3>CI/CD Pipeline Engineering</h3>
+                <a href="# ">Learn More</a>
+            </div>
+
+
+            <!-- Box 2 -->
+          <div class="services-box ">
+                <i class='bx bx-server'></i>
+                <h3>Cloud-Native Application Deployment</h3>
+                <a href="# ">Learn More</a>
+            </div> 
+
+
+        </div> 
+     </section> 
+
+
+    <!-- Portfolio -->
+<!--     <section class="portfolio" id="portfolio">
+        <div class="heading ">
+            <h2>Portfolio</h2>
+            <br><span>My Recent Work (Air HandWriting Recognition)</span>
+        </div>
+        <div class="portfolio-content ">
+            <div class="portfolio-img ">
+                <img src="sun.png " alt=" ">
+            </div>
+            <div class="portfolio-img ">
+                <img src="sun1.png " alt=" ">
+            </div>
+            <div class="portfolio-img ">
+                <img src="reco.png " alt=" ">
+            </div>
+
+        </div>
+    </section>
+
+<!--     <section id="services" class="services">
+  <h2>Services</h2>
+  <p>Key services for modern cloud-native development and operations.</p>
+
+  <div class="service-item">
+    <div class="service-icon">
+      <i class="fas fa-cloud-upload-alt"></i>
     </div>
-    <h1>Sudhanshu Sakhala</h1>
-    <h2>Hello, I'm <span class="auto-type"></span></h2>
-    <a href="#contact" class="btn">Contact Me</a>
-  </section>
+    <h3>Cloud Infrastructure & Automation</h3>
+    <p>
+      Design, build, and automate cloud infrastructure (AWS, Azure, GCP) using
+      Infrastructure as Code (IaC) for scalability and efficiency.
+    </p>
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="heading"><h2>About Me</h2><span>Introduction</span></div>
-    <p>Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure. Skilled in Terraform, Azure, GCP, and Linux networking. Passionate about optimizing cloud resources and driving continuous improvement in system reliability.</p>
-  </section>
-
-  <!-- Skills -->
-  <section class="skills" id="skills">
-    <div class="heading"><h2>Skills</h2><span>My Expertise</span></div>
-    <div class="skills-container">
-      <div class="skill" style="--width:80%;"><h3>Cloud Computing (GCP/Azure)</h3><div class="bar"><div class="progress" style="--width:80%;"></div></div></div>
-      <div class="skill" style="--width:75%;"><h3>Infrastructure as Code (Terraform)</h3><div class="bar"><div class="progress" style="--width:75%;"></div></div></div>
-      <div class="skill" style="--width:70%;"><h3>Automation & Scripting</h3><div class="bar"><div class="progress" style="--width:70%;"></div></div></div>
-      <div class="skill" style="--width:80%;"><h3>Linux & Networking</h3><div class="bar"><div class="progress" style="--width:80%;"></div></div></div>
-      <div class="skill" style="--width:90%;"><h3>Dynatrace & Splunk</h3><div class="bar"><div class="progress" style="--width:90%;"></div></div></div>
-      <div class="skill" style="--width:85%;"><h3>Containerization & Orchestration</h3><div class="bar"><div class="progress" style="--width:85%;"></div></div></div>
+  <div class="service-item">
+    <div class="service-icon">
+      <i class="fas fa-code-branch"></i>
     </div>
-  </section>
+    <h3>CI/CD Pipeline Engineering</h3>
+    <p>
+      Implement and optimize CI/CD pipelines to automate build, test, and
+      deployment processes for faster and more reliable releases.
+    </p>
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
 
-  <!-- Services -->
-  <section class="services" id="services">
-    <div class="heading"><h2>Services</h2><span>What I Offer</span></div>
-    <div class="services-container">
-      <div class="service-box"><i class='bx bx-code-alt'></i><h3>Cloud Infrastructure & Automation</h3><a href="#">Learn More</a></div>
-      <div class="service-box"><i class='bx bx-code-alt'></i><h3>CI/CD Pipeline Engineering</h3><a href="#">Learn More</a></div>
-      <div class="service-box"><i class='bx bx-server'></i><h3>Cloud-Native Application Deployment</h3><a href="#">Learn More</a></div>
+  <div class="service-item">
+    <div class="service-icon">
+      <i class="fas fa-tools"></i>
     </div>
-  </section>
+    <h3>Cloud-Native Application Deployment</h3>
+    <p>
+      Deploy, manage, and scale cloud-native applications using containerization
+      (Docker), orchestration (Kubernetes), and serverless technologies.
+    </p>
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</section> -->
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="heading"><h2>Contact Me</h2><span>Let's Connect</span></div>
-    <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send on WhatsApp</button>
-    </form>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1470.2437970783674!2d74.72778153826765!3d19.102933530035127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb1da38fb7de1%3A0xa0825b981082b980!2sArabella%20By%20Marc!5e1!3m2!1sen!2sin!4v1766568452315!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="heading ">
+            <h2>Contact</h2>
+            <span>Connect with me </span>
+        </div>
+        <div class="contact-form ">
+            <div class="info-box ">
+                <i class='bx bxs-user'></i>
+                <span>Sudhanshu Sakhala</span>
+            </div><br>
+            <!-- Box 2 -->
+            <div class="info-box ">
+                <i class='bx bxs-phone'></i>
+                <span>+91-7744869769</span>
+            </div><br>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/profile.php?id=100007208868447"><i class='bx bxl-facebook'></i></a>
-      <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
+            <div class="info-box ">
+                <i class='bx bxs-conversation'></i>
+                <span>sakhalasudhanshu@gmail.com</span>
+            </div><br>
+
+            <div class="info-box ">
+                <i class='bx bxs-map'></i>
+                <span>Kothrud, Pune</span>
+            </div><br><br>
+            <iframe src="https://skribbl.io"
+            width="380" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+<!-- 
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15291.839769895969!2d73.80380300318951!3d18.50412293934304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfc71204d973%3A0xa64b5ea5c34c0785!2sMayur%20Apartment%2C%20Ganesh%20Nagar%20Co-Operative%20Housing%20Society%2C%20Londhe%20Wada%2C%20Chaitanya%20Nagar%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411058!5e1!3m2!1sen!2sin!4v1678165272592!5m2!1sen!2sin"
+            width="380" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ -->
+
+        </div>
+
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contact-form ">
+            <form action="https://app.headlessforms.cloud/api/v1/form-submission/uRscuHyiwD" method="POST">
+                <input type="text " placeholder="Your Name " name="name">
+                <input type="email " id=" " placeholder="Your Email " name="email">
+                <textarea name="message" id=" " cols="30 " rows="10 " placeholder="Write Message Here... "></textarea>
+                <!-- <input type="button " value="Send " class="contact-button "> -->
+                <button class="w-100 btn btn-lg btn-primary">Send</button>
+            </form>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Reach to me</h2>
+        <div class="footer-social ">
+            <a href="https://www.facebook.com/profile.php?id=100007208868447 "><i class='bx bxl-facebook'></i></a>
+            <a href="https://instagram.com/sudhanxu__ "><i class='bx bxl-instagram'></i></a>
+        </div>
+
     </div>
-    <p>Created by <a href="https://instagram.com/isu.dhanshu" style="color:var(--accent-color)">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
-  </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>Create By <a href="https://instagram.com/sudhanxu__ ">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
+    </div>
 
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    var typed = new Typed(".auto-type", {
-      strings: ["A Software Engineer", "A DevOps Engineer"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true
-    });
+    <!-- Link To JS -->
+    <script src="./js/script.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    function sendWhatsApp() {
-      const name = document.getElementById("name").value.trim();
-      const msg = document.getElementById("message").value.trim();
-      if(!name || !msg){ alert("Please fill all fields"); return; }
-      const phone = "+917744869769";
-      const text = `Hello, I am ${name}.%0A%0A${msg}`;
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-    }
-  </script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["A Software Development Engineer","A Cloud Devops Engineer", "A Site Reliability Engineer"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
 </body>
+
+
 </html>
-
-
