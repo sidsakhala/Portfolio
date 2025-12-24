@@ -69,6 +69,15 @@ header {
     box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
+.contact-box {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 header.shadow {
     box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
@@ -578,3 +587,4 @@ form textarea {
         margin-left: 25%;
     }
 }
+
