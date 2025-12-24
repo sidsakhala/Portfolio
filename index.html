@@ -323,15 +323,14 @@
 
     <section class="contact" id="contact">
         <div class="contact-form ">
-            <form action="https://app.headlessforms.cloud/api/v1/form-submission/uRscuHyiwD" method="POST">
-                <input type="text " placeholder="Your Name " name="name">
-                <input type="email " id=" " placeholder="Your Email " name="email">
-                <textarea name="message" id=" " cols="30 " rows="10 " placeholder="Write Message Here... "></textarea>
-                <!-- <input type="button " value="Send " class="contact-button "> -->
-                <button class="w-100 btn btn-lg btn-primary">Send</button>
+            <div class="heading"><h2>Contact Me</h2><span>Let's Connect</span></div>
+            <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Send on WhatsApp</button>
             </form>
+  
         </div>
-
     </section>
 
 
@@ -366,3 +365,4 @@
 
 
 </html>
+
