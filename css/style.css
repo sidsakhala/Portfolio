@@ -1,176 +1,136 @@
-/* Global */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1f2933;
-    color: white;
-    padding: 10px 20px;
-}
-
-.navbar {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.navbar li a:hover {
-    color: #00bcd4;
-}
-
-/* Home */
-.home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 20px;
-    background: #e0f7fa;
-}
-
-.home .social a {
-    font-size: 24px;
-    margin-right: 15px;
-    color: #333;
-}
-
-.home-text h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.home-text .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #00bcd4;
-    color: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* About */
-.about {
-    padding: 50px 20px;
-    background: #fff;
-    text-align: center;
-}
-
-/* Skills */
-.skills {
-    padding: 50px 20px;
-    background: #f9f9f9;
-}
-
+/* --- Skills Section --- */
 .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.bars-box {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.skill {
-    width: 250px;
+.bars-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
 }
 
-.skill h3 {
-    margin-bottom: 5px;
-}
-
-.bar {
+.light-bar {
     width: 100%;
-    height: 12px;
-    background: #ddd;
-    border-radius: 6px;
+    height: 0.6rem;
+    background: hsla(260, 100%, 44%, 0.2);
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
-.progress {
+.percent-bar {
     height: 100%;
-    background: #00bcd4;
-    border-radius: 6px;
+    width: 0;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    animation: fillBar 2s forwards;
 }
 
-/* Services */
-.services {
-    padding: 50px 20px;
-    background: #fff;
-    text-align: center;
+/* Skill-specific colors (optional for visual variety) */
+.back-bar { background: #033a80; }
+.python-bar { background: #f0db4f; } /* Terraform/Automation yellow */
+.ml-bar { background: #22cf91; }     /* Automation/ML green */
+.dbms-bar { background: #ff6b6b; }   /* Linux/Networking red */
+.java-bar { background: #0077b6; }   /* Dynatrace & Splunk blue */
+.javascript-bar { background: #f7df1e; } /* Containerization yellow */
+
+/* Animation for bars */
+@keyframes fillBar {
+    0% { width: 0; }
+    100% { width: var(--bar-width); }
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Dynamically set bar width via inline style */
+.bars-box[data-percent] .percent-bar {
+    width: attr(data-percent %);
 }
 
-.service-box {
-    background: #e0f7fa;
+/* --- Services Section Hover Enhancement --- */
+.services-box {
     padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.service-box:hover {
-    transform: translateY(-5px);
-}
-
-/* Contact */
-.contact {
-    padding: 50px 20px;
-    background: #f4f6f8;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+    transition: transform 0.3s, background 0.3s;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.services-box:hover {
+    transform: translateY(-6px);
+    background-color: #02225a;
 }
 
-.contact-form button {
-    padding: 12px 20px;
-    background: #25D366;
+.services-box h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+    transition: color 0.3s;
+}
+
+.services-box:hover h3 {
     color: #fff;
-    border: none;
-    border-radius: 8px;
+}
+
+.services-box .bx {
+    font-size: 50px;
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+
+.services-box:hover .bx {
+    color: #22cf91;
+}
+
+.services-box a {
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.services-box:hover a {
+    color: #8b8a8f;
+}
+
+/* --- Buttons --- */
+.btn, .contact-button {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.5rem;
+    background: var(--main-color);
+    color: #fff;
+    font-weight: 500;
     cursor: pointer;
-}
-
-.contact-form button:hover {
-    background: #1ebe5d;
-}
-
-/* Footer */
-.footer {
-    padding: 30px 20px;
-    background: #1f2933;
-    color: white;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
-.footer-social a {
-    margin: 0 10px;
-    color: white;
-    font-size: 24px;
+.btn:hover, .contact-button:hover {
+    background: var(--hover);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Adjustments for Skills --- */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .bars-box h3 {
+        font-size: 1rem;
+    }
 }
