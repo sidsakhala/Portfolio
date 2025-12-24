@@ -1,181 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudhanshu Sakhala</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudhanshu Sakhala Portfolio</title>
+  
+  <!-- Box Icons -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Box Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* --- Reset & Root --- */
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    :root {
+      --main-color: #033a80;
+      --accent-color: #22cf91;
+      --bg-color: #f4f6f8;
+      --text-color: #0f0c27;
+      --hover-color: #0251a0;
+      --big-font: 3rem;
+      --medium-font: 1.5rem;
+    }
+
+    body {background: var(--bg-color); color: var(--text-color); scroll-behavior: smooth;}
+    a {text-decoration: none; color: inherit;}
+    h1,h2,h3 {margin:0;}
+    section {padding: 80px 10%;}
+    .heading {text-align:center; margin-bottom:40px;}
+    .heading h2 {font-size:2rem; margin-bottom:10px;}
+    .heading span {color: var(--accent-color); font-size:1rem;}
+
+    /* --- Header --- */
+    header {
+      position: fixed; top:0; width:100%; z-index:1000;
+      background: #fff; display:flex; justify-content:space-between; align-items:center;
+      padding:15px 10%; box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+    .logo {font-weight:600; font-size:1.5rem;}
+    .navbar {display:flex; gap:20px;}
+    .navbar a {padding:10px 15px; font-weight:500; transition:0.3s;}
+    .navbar a:hover {color: var(--hover-color);}
+    #menu-icon {display:none; font-size:24px; cursor:pointer;}
+
+    /* --- Home --- */
+    .home {display:flex; flex-direction:column; align-items:center; text-align:center; min-height:80vh; justify-content:center;}
+    .home h1 {font-size: var(--big-font);}
+    .home h2 {font-size: var(--medium-font); margin:15px 0;}
+    .home .btn {padding:10px 20px; background: var(--main-color); color:#fff; border-radius:5px; transition:0.3s;}
+    .home .btn:hover {background: var(--hover-color);}
+    .social {display:flex; gap:15px; margin-bottom:20px;}
+    .social a {font-size:28px; color:var(--text-color);}
+    .social a:hover {color: var(--hover-color);}
+
+    /* --- About --- */
+    .about p {max-width:700px; margin:0 auto; line-height:1.6; text-align:center;}
+
+    /* --- Skills --- */
+    .skills-container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:40px;}
+    .skill {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+    .skill h3 {margin-bottom:10px; font-size:1.1rem;}
+    .bar {background:#ddd; height:10px; border-radius:5px; overflow:hidden;}
+    .progress {height:100%; width:0; border-radius:5px; background: var(--main-color); animation: fillBar 2s forwards;}
+    @keyframes fillBar {from{width:0;} to{width:var(--width);}}
+
+    /* --- Services --- */
+    .services-container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:40px;}
+    .service-box {background:#fff; padding:20px; border-radius:10px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.05); transition:0.3s;}
+    .service-box:hover {transform:translateY(-5px); background:var(--main-color); color:#fff;}
+    .service-box .bx {font-size:40px; margin-bottom:10px; transition:0.3s;}
+    .service-box:hover .bx {color: var(--accent-color);}
+    .service-box h3 {margin-bottom:10px; font-size:1.1rem;}
+    .service-box a {font-weight:500; color:var(--main-color); transition:0.3s;}
+    .service-box:hover a {color:#fff;}
+
+    /* --- Contact --- */
+    .contact-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+    .contact-form input, .contact-form textarea {padding:12px; border-radius:8px; border:1px solid #ccc; outline:none;}
+    .contact-form button {padding:12px; background:#25D366; color:#fff; border:none; border-radius:8px; cursor:pointer; transition:0.3s;}
+    .contact-form button:hover {background:#1ebe5d;}
+
+    /* --- Footer --- */
+    footer {background:#1f2933; color:#fff; text-align:center; padding:40px 10%; margin-top:40px;}
+    footer .footer-social a {margin:0 10px; color:#fff; font-size:25px;}
+    footer .footer-social a:hover {color: var(--accent-color);}
+    footer p {margin-top:15px; color:#aaa;}
+
+    /* --- Responsive --- */
+    @media(max-width:768px){.navbar{display:none;} #menu-icon{display:block;}}
+  </style>
 </head>
 
 <body>
-    <!-- Header & Navbar -->
-    <header class="header" id="header">
-        <div class="logo">Sudhanshu Sakhala</div>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <div class="bx bx-moon" id="darkmode"></div>
-        </ul>
-    </header>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="social">
-            <a href="https://github.com/sidsakhala"><i class='bx bxl-github'></i></a>
-            <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Sudhanshu Sakhala</div>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-        <div class="home-text">
-            <h1>Sudhanshu Sakhala</h1>
-            <h2>Hello, I'm <span class="auto-type"></span></h2>
-            <a href="#contact" class="btn">Contact Me</a>
-        </div>
-    </section>
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="social">
+      <a href="https://github.com/sidsakhala"><i class='bx bxl-github'></i></a>
+      <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
+    </div>
+    <h1>Sudhanshu Sakhala</h1>
+    <h2>Hello, I'm <span class="auto-type"></span></h2>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>
-            Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure. Skilled in Terraform, Azure, GCP, and Linux networking. Proficient in network analysis and troubleshooting with tools like tcpdump, netstat, and Wireshark. Passionate about reducing operational friction, optimizing cloud resources, and driving continuous improvement in system reliability.
-        </p>
-    </section>
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="heading"><h2>About Me</h2><span>Introduction</span></div>
+    <p>Cloud DevOps Engineer dedicated to applying SRE principles to design, build, and operate highly reliable cloud infrastructure. Skilled in Terraform, Azure, GCP, and Linux networking. Passionate about optimizing cloud resources and driving continuous improvement in system reliability.</p>
+  </section>
 
-    <!-- Bio Section -->
-    <section class="bio" id="bio">
-        <div class="information">
-            <div class="info-box"><i class='bx bx-calendar'></i><span>23-03-2002</span></div>
-            <div class="info-box"><i class='bx bxs-phone'></i><span>+91-7744869769</span></div>
-            <div class="info-box"><i class='bx bxs-map'></i><span>Pune, India</span></div>
-            <div class="info-box"><i class='bx bxs-graduation'></i><span>MCA</span></div>
-            <div class="info-box"><i class='bx bxs-conversation'></i><span>sudhanshu.sakhala2002@gmail.com</span></div>
-        </div>
-        <a href="Sudhanshu_sakhala.pdf" download class="btn">Download My Resume <i class='bx bxs-download'></i></a>
-    </section>
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <div class="heading"><h2>Skills</h2><span>My Expertise</span></div>
+    <div class="skills-container">
+      <div class="skill" style="--width:80%;"><h3>Cloud Computing (GCP/Azure)</h3><div class="bar"><div class="progress" style="--width:80%;"></div></div></div>
+      <div class="skill" style="--width:75%;"><h3>Infrastructure as Code (Terraform)</h3><div class="bar"><div class="progress" style="--width:75%;"></div></div></div>
+      <div class="skill" style="--width:70%;"><h3>Automation & Scripting</h3><div class="bar"><div class="progress" style="--width:70%;"></div></div></div>
+      <div class="skill" style="--width:80%;"><h3>Linux & Networking</h3><div class="bar"><div class="progress" style="--width:80%;"></div></div></div>
+      <div class="skill" style="--width:90%;"><h3>Dynatrace & Splunk</h3><div class="bar"><div class="progress" style="--width:90%;"></div></div></div>
+      <div class="skill" style="--width:85%;"><h3>Containerization & Orchestration</h3><div class="bar"><div class="progress" style="--width:85%;"></div></div></div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <p>The domains in which I work</p>
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="heading"><h2>Services</h2><span>What I Offer</span></div>
+    <div class="services-container">
+      <div class="service-box"><i class='bx bx-code-alt'></i><h3>Cloud Infrastructure & Automation</h3><a href="#">Learn More</a></div>
+      <div class="service-box"><i class='bx bx-code-alt'></i><h3>CI/CD Pipeline Engineering</h3><a href="#">Learn More</a></div>
+      <div class="service-box"><i class='bx bx-server'></i><h3>Cloud-Native Application Deployment</h3><a href="#">Learn More</a></div>
+    </div>
+  </section>
 
-        <div class="skills-container">
-            <div class="skill">
-                <h3>Cloud Computing (GCP/Azure)</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h3>Infrastructure as Code (Terraform)</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 75%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h3>Automation & Scripting</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h3>Linux & Networking</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h3>Dynatrace & Splunk</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h3>Containerization & Orchestration</h3>
-                <div class="bar">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="heading"><h2>Contact Me</h2><span>Let's Connect</span></div>
+    <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send on WhatsApp</button>
+    </form>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Services</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Cloud Infrastructure & Automation</h3>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="service-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>CI/CD Pipeline Engineering</h3>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="service-box">
-                <i class='bx bx-server'></i>
-                <h3>Cloud-Native Application Deployment</h3>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/profile.php?id=100007208868447"><i class='bx bxl-facebook'></i></a>
+      <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
+    </div>
+    <p>Created by <a href="https://instagram.com/sudhanxu__" style="color:var(--accent-color)">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <div class="info-box"><i class='bx bxs-user'></i><span>Sudhanshu Sakhala</span></div>
-            <div class="info-box"><i class='bx bxs-phone'></i><span>+91-7744869769</span></div>
-            <div class="info-box"><i class='bx bxs-conversation'></i><span>sakhalasudhanshu@gmail.com</span></div>
-            <div class="info-box"><i class='bx bxs-map'></i><span>Kothrud, Pune</span></div>
-        </div>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["A Software Development Engineer", "A Cloud DevOps Engineer", "A Site Reliability Engineer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
 
-        <div class="contact-form">
-            <input type="text" id="name" placeholder="Your Name">
-            <textarea id="message" placeholder="Your Message"></textarea>
-            <button onclick="sendWhatsApp()">Send on WhatsApp</button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <h2>Reach out to me</h2>
-        <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=100007208868447"><i class='bx bxl-facebook'></i></a>
-            <a href="https://instagram.com/sudhanxu__"><i class='bx bxl-instagram'></i></a>
-        </div>
-        <p>Created by <a href="https://instagram.com/sudhanxu__">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="js/script.js"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["A Software Development Engineer", "A Cloud DevOps Engineer", "A Site Reliability Engineer"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-
-        function sendWhatsApp() {
-            const name = document.getElementById("name").value.trim();
-            const msg = document.getElementById("message").value.trim();
-            if (!name || !msg) return alert("Please fill all fields");
-            const phone = "+917744869769";
-            const text = `Hello, I am ${name}.%0A%0A${msg}`;
-            window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-        }
-    </script>
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value.trim();
+      const msg = document.getElementById("message").value.trim();
+      if(!name || !msg){ alert("Please fill all fields"); return; }
+      const phone = "+917744869769";
+      const text = `Hello, I am ${name}.%0A%0A${msg}`;
+      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    }
+  </script>
 </body>
-
 </html>
