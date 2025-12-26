@@ -174,15 +174,30 @@
         <div class="resumo_fn_cv_btn ">
             <a href="Sudhanshu_sakhala.pdf " download>
                 <br>
-                <button type="button" class="btn btn-outline-info">Download My Resume<span>
-                        <div class="info-box "><i class='bx bxs-download'></i>
-                            <!-- <span>sudhanshu.sakhala2002@gmail.com</span> -->
-                        </div>
-                    </span></button>
+                <button onclick="openResumeForm()" class="btn btn-outline-info">
+  Download My Resume
+</button>
+
             </a>
         </div>
         <!-- <a href="# " class="btn ">Download Cv</a> -->
     </section>
+
+    <div id="resumeModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6);">
+  <div style="background:#fff; max-width:400px; margin:10% auto; padding:20px; border-radius:10px;">
+    
+    <h3>Before downloading</h3>
+    <p>Your name will be shared with me on WhatsApp.</p>
+
+    <input type="text" id="resumeName" placeholder="Enter your name" />
+
+    <button onclick="sendNameAndDownload()" class="btn">
+      Continue & Download
+    </button>
+
+  </div>
+</div>
+
     <!-- Skills -->
     <section class="skills" id="skills">
         <div class="heading ">
@@ -432,10 +447,43 @@
         });
     </script>
 
+    <script>
+function openResumeForm() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+function sendNameAndDownload() {
+  const name = document.getElementById("resumeName").value.trim();
+  if (!name) {
+    alert("Please enter your name");
+    return;
+  }
+
+  const phone = "+91-7744869769"; // no +, no spaces
+  const message = encodeURIComponent(
+    `Resume downloaded by: ${name}`
+  );
+
+  // Open WhatsApp (user must click Send)
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+  // Start resume download
+  const link = document.createElement("a");
+  link.href = "Sudhanshu_sakhala.pdf";
+  link.download = "Sudhanshu_Sakhala_Resume.pdf";
+  link.click();
+
+  // Close modal
+  document.getElementById("resumeModal").style.display = "none";
+}
+</script>
+
+
 </body>
 
 
 </html>
+
 
 
 
