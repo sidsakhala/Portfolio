@@ -176,49 +176,45 @@
 
     <section class="resume" id="resume">
     <div class="contact-box">
-        <h2>Send My Resume to Your WhatsApp</h2>
+        <h2>Send Me Your WhatsApp Number</h2>
 
-        <input type="text" id="visitorPhone" placeholder="Your Phone Number (e.g., 919876543210)" />
+        <input type="text" id="visitorPhone" placeholder="Your WhatsApp Number (e.g., 919876543210)" />
 
         <button onclick="sendResumeWhatsApp()" class="btn">
-            Send Resume to WhatsApp
+            Submit
         </button>
     </div>
 </section>
 
-    <script>
+<script>
     function sendResumeWhatsApp() {
         const visitorPhone = document.getElementById("visitorPhone").value.trim();
 
         // Validate phone number
         if (!visitorPhone) {
-            alert("Please enter your phone number");
+            alert("Please enter your WhatsApp number");
             return;
         }
 
-        // Simple numeric validation
         const phoneDigits = visitorPhone.replace(/\D/g, "");
         if (phoneDigits.length < 10) {
             alert("Please enter a valid phone number");
             return;
         }
 
-        // Your resume download link (make sure this path is correct)
-        const resumeLink = encodeURIComponent(
-            "https://yourdomain.com/Sudhanshu_sakhala.pdf"
-        );
+        // Your hosted resume link — update this to your actual resume URL
+        const resumeLink = "https://github.com/sidsakhala/Portfolio/blob/main/Sudhanshu_sakhala.pdf";
 
-        // WhatsApp API link to visitor's phone
-        const textMessage = encodeURIComponent(
-            "Hello! Please find my resume here: " + resumeLink
-        );
+        // Message text
+        const textMessage = `Hey, I am interested to get your resume.%0AHere is my WhatsApp number: ${phoneDigits}%0A%0AResume: ${resumeLink}`;
 
-        const whatsappUrl = `https://wa.me/${phoneDigits}?text=${textMessage}`;
+        const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(textMessage)}`;
 
-        // Open WhatsApp
+        // Open WhatsApp with the prefilled message
         window.open(whatsappUrl, "_blank");
     }
 </script>
+
 
 
     <!-- Skills -->
@@ -476,6 +472,7 @@
 
 
 </html>
+
 
 
 
