@@ -175,44 +175,33 @@
     </section>
 
     <section class="resume" id="resume">
-    <div class="contact-box">
-        <h2>Send Me Your WhatsApp Number</h2>
+     <div class="contact-box">
+        <h2>Get My Resume</h2>
 
         <input type="text" id="visitorPhone" placeholder="Your WhatsApp Number (e.g., 919876543210)" />
 
-        <button onclick="sendResumeWhatsApp()" class="btn">
+        <button onclick="sendRequest()" class="btn">
             Submit
         </button>
     </div>
 </section>
 
 <script>
-    function sendResumeWhatsApp() {
-        const visitorPhone = document.getElementById("visitorPhone").value.trim();
+function sendRequest() {
+    const phone = document.getElementById("visitorPhone").value.trim();
+    if (!phone) return alert("Enter your WhatsApp number");
 
-        // Validate phone number
-        if (!visitorPhone) {
-            alert("Please enter your WhatsApp number");
-            return;
-        }
-
-        const phoneDigits = visitorPhone.replace(/\D/g, "");
-        if (phoneDigits.length < 10) {
-            alert("Please enter a valid phone number");
-            return;
-        }
-
-        // Your hosted resume link — update this to your actual resume URL
-        const resumeLink = "https://github.com/sidsakhala/Portfolio/blob/main/Sudhanshu_sakhala.pdf";
-
-        // Message text
-        const textMessage = `Hey, I am interested to get your resume.%0AHere is my WhatsApp number: ${phoneDigits}%0A%0AResume: ${resumeLink}`;
-
-        const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(textMessage)}`;
-
-        // Open WhatsApp with the prefilled message
-        window.open(whatsappUrl, "_blank");
-    }
+    fetch("/api/send-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(err => alert("Error: " + err));
+}
 </script>
 
 
@@ -472,6 +461,7 @@
 
 
 </html>
+
 
 
 
