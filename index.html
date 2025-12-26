@@ -13,7 +13,7 @@
 </head>
 
 <style>
-    
+
 
     .contact-box {
         max-width: 500px;
@@ -170,42 +170,19 @@
         </div>
 
 
-      
+        <!-- Download CV Button -->
+        <div class="resumo_fn_cv_btn ">
+            <a href="Sudhanshu_sakhala.pdf " download>
+                <br>
+                <button type="button" class="btn btn-outline-info">Download My Resume<span>
+                        <div class="info-box "><i class='bx bxs-download'></i>
+                            <!-- <span>sudhanshu.sakhala2002@gmail.com</span> -->
+                        </div>
+                    </span></button>
+            </a>
+        </div>
         <!-- <a href="# " class="btn ">Download Cv</a> -->
     </section>
-
-    <section class="resume" id="resume">
-     <div class="contact-box">
-        <h2>Get My Resume</h2>
-
-        <input type="text" id="visitorPhone" placeholder="Your WhatsApp Number (e.g., 919876543210)" />
-
-        <button onclick="sendRequest()" class="btn">
-            Submit
-        </button>
-    </div>
-</section>
-
-<script>
-function sendRequest() {
-    const phone = document.getElementById("visitorPhone").value.trim();
-    if (!phone) return alert("Enter your WhatsApp number");
-
-    fetch("/api/send-request", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone })
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert(data.message);
-    })
-    .catch(err => alert("Error: " + err));
-}
-</script>
-
-
-
     <!-- Skills -->
     <section class="skills" id="skills">
         <div class="heading ">
@@ -455,19 +432,10 @@ function sendRequest() {
         });
     </script>
 
-
-
 </body>
 
 
 </html>
-
-
-
-
-
-
-
 
 
 
