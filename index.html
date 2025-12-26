@@ -170,33 +170,56 @@
         </div>
 
 
-        <!-- Download CV Button -->
-        <div class="resumo_fn_cv_btn ">
-            <a href="Sudhanshu_sakhala.pdf " download>
-                <br>
-                <button onclick="openResumeForm()" class="btn btn-outline-info">
-  Download My Resume
-</button>
-
-            </a>
-        </div>
+      
         <!-- <a href="# " class="btn ">Download Cv</a> -->
     </section>
 
-    <div id="resumeModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6);">
-  <div style="background:#fff; max-width:400px; margin:10% auto; padding:20px; border-radius:10px;">
-    
-    <h3>Before downloading</h3>
-    <p>Your name will be shared with me on WhatsApp.</p>
+    <section class="resume" id="resume">
+    <div class="contact-box">
+        <h2>Send My Resume to Your WhatsApp</h2>
 
-    <input type="text" id="resumeName" placeholder="Enter your name" />
+        <input type="text" id="visitorPhone" placeholder="Your Phone Number (e.g., 919876543210)" />
 
-    <button onclick="sendNameAndDownload()" class="btn">
-      Continue & Download
-    </button>
+        <button onclick="sendResumeWhatsApp()" class="btn">
+            Send Resume to WhatsApp
+        </button>
+    </div>
+</section>
 
-  </div>
-</div>
+    <script>
+    function sendResumeWhatsApp() {
+        const visitorPhone = document.getElementById("visitorPhone").value.trim();
+
+        // Validate phone number
+        if (!visitorPhone) {
+            alert("Please enter your phone number");
+            return;
+        }
+
+        // Simple numeric validation
+        const phoneDigits = visitorPhone.replace(/\D/g, "");
+        if (phoneDigits.length < 10) {
+            alert("Please enter a valid phone number");
+            return;
+        }
+
+        // Your resume download link (make sure this path is correct)
+        const resumeLink = encodeURIComponent(
+            "https://yourdomain.com/Sudhanshu_sakhala.pdf"
+        );
+
+        // WhatsApp API link to visitor's phone
+        const textMessage = encodeURIComponent(
+            "Hello! Please find my resume here: " + resumeLink
+        );
+
+        const whatsappUrl = `https://wa.me/${phoneDigits}?text=${textMessage}`;
+
+        // Open WhatsApp
+        window.open(whatsappUrl, "_blank");
+    }
+</script>
+
 
     <!-- Skills -->
     <section class="skills" id="skills">
@@ -447,42 +470,13 @@
         });
     </script>
 
-    <script>
-function openResumeForm() {
-  document.getElementById("resumeModal").style.display = "block";
-}
-
-function sendNameAndDownload() {
-  const name = document.getElementById("resumeName").value.trim();
-  if (!name) {
-    alert("Please enter your name");
-    return;
-  }
-
-  const phone = "+91-7744869769"; // no +, no spaces
-  const message = encodeURIComponent(
-    `Resume downloaded by: ${name}`
-  );
-
-  // Open WhatsApp (user must click Send)
-  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-
-  // Start resume download
-  const link = document.createElement("a");
-  link.href = "Sudhanshu_sakhala.pdf";
-  link.download = "Sudhanshu_Sakhala_Resume.pdf";
-  link.click();
-
-  // Close modal
-  document.getElementById("resumeModal").style.display = "none";
-}
-</script>
 
 
 </body>
 
 
 </html>
+
 
 
 
