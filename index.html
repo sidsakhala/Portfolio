@@ -3,344 +3,394 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sudhanshu Sakhala</title>
-
-    <!-- Link To CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Box Icons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description"
+        content="Sudhanshu Sakhala — AI Engineer building production Agentic AI, LangGraph agents, RAG systems, and enterprise MCP platforms." />
+    <meta name="author" content="Sudhanshu Sakhala" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta property="og:title" content="Sudhanshu Sakhala | AI Engineer" />
+    <meta property="og:description"
+        content="Production-grade Agentic AI, LLM orchestration, RAG, and FastAPI agent services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sidsakhala.github.io/Portfolio/" />
+    <meta property="og:image" content="https://sidsakhala.github.io/Portfolio/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sudhanshu Sakhala | AI Engineer" />
+    <meta name="twitter:description"
+        content="Production Agentic AI, LangGraph agents, RAG systems, and enterprise MCP platforms." />
+    <meta name="twitter:image" content="https://sidsakhala.github.io/Portfolio/assets/og-image.png" />
+    <link rel="canonical" href="https://sidsakhala.github.io/Portfolio/" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <title>Sudhanshu Sakhala | AI Engineer</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sudhanshu Sakhala",
+      "jobTitle": "AI Engineer",
+      "email": "mailto:sudhanshu.sakhala2002@gmail.com",
+      "telephone": "+91-7744869769",
+      "url": "https://sidsakhala.github.io/Portfolio/",
+      "sameAs": [
+        "https://linkedin.com/in/sudhanshu-sakhala-800444191",
+        "https://github.com/sidsakhala"
+      ],
+      "knowsAbout": [
+        "Agentic AI",
+        "LangGraph",
+        "LangChain",
+        "MCP",
+        "Retrieval Augmented Generation",
+        "FastAPI",
+        "PostgreSQL pgvector"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Modak Analytics"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "MIT World Peace University"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<style>
-    .contact-box {
-        max-width: 500px;
-        margin: 40px auto;
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 12px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        font-size: 15px;
-    }
-
-    textarea {
-        height: 120px;
-        resize: none;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        background: #25D366;
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #1ebe5d;
-    }
-
-    .back {
-        text-align: center;
-        margin-top: 20px;
-    }
-</style>
-
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header -->
-    <section class="header" id="section">
-        <header>
-            <div class="bx bx-menu" id="menu-icon"></div>
-
-            <ul class="navbar">
-                <li><a href="#home">Home</a></li>
+    <header class="site-header" id="top">
+        <nav class="nav container" aria-label="Primary">
+            <a class="logo" href="#top">SS<span class="logo-accent">.</span></a>
+            <ul class="nav-links" id="site-nav">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#github-work">GitHub</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <div class="bx bx-moon" id="darkmode"></div>
             </ul>
-            <br />
-        </header>
-    </section>
-
-    <!-- Home -->
-    <section class="home" id="home">
-        <div class="social">
-            <br />
-            <a href="https://github.com/sidsakhala"><i class="bx bxl-github"></i></a>
-            <a href="https://instagram.com/sudhanxu__"><i class="bx bxl-instagram"></i></a>
-        </div>
-
-        <div class="home-text">
-            <h1>Sudhanshu Sakhala</h1>
-            <h2>Hello, I'm <span class="auto-type"></span></h2>
-            <br /><br /><br />
-            <a href="#contact" class="btn">Contact Me</a>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="heading">
-            <h2>About Me</h2>
-            <br />
-            <span>Introduction</span>
-            <br />
-        </div>
-
-        <div class="about1">
-            <br />
-            <p class="bio">
-                As a DevOps and Site Reliability Engineer I have hands-on experience in automating cloud
-                infrastructure, streamlining CI/CD pipelines, and improving system reliability across Azure
-                and GCP. Skilled in monitoring, troubleshooting, and building scalable solutions with
-                Terraform, Kubernetes, and Docker. Strong foundation in software engineering with the
-                ability to bridge development and operations for faster, reliable, and secure deployments.
-            </p>
-        </div>
-    </section>
-
-    <!-- Bio -->
-    <section class="bio" id="bio">
-        <div class="information">
-            <div class="info-box">
-                <i class="bx bx-calendar"></i>
-                <span>23-03-2002</span>
-            </div>
-
-            <div class="info-box">
-                <i class="bx bxs-phone"></i>
-                <span>+91-7744869769</span>
-            </div>
-
-            <div class="info-box">
-                <i class="bx bxs-map"></i>
-                <span>Ahilyanagar, India</span>
-            </div>
-
-            <div class="info-box">
-                <i class="bx bxs-graduation"></i>
-                <span>MCA</span>
-            </div>
-
-            <div class="info-box">
-                <i class="bx bxs-conversation"></i>
-                <span>sudhanshu.sakhala2002@gmail.com</span>
-            </div>
-        </div>
-
-        <div class="resumo_fn_cv_btn">
-            <a href="Sudhanshu_sakhala.pdf" download>
-                <br />
-                <button type="button" class="btn btn-outline-info">
-                    Download My Resume
-                    <span>
-                        <div class="info-box">
-                            <i class="bx bxs-download"></i>
-                        </div>
-                    </span>
+            <div class="nav-controls">
+                <button type="button" class="theme-toggle" id="darkmode" aria-label="Toggle color theme">
+                    <i class="bx bx-moon" aria-hidden="true"></i>
                 </button>
-            </a>
-        </div>
-    </section>
+                <button type="button" class="nav-toggle" id="menu-icon" aria-expanded="false"
+                    aria-controls="site-nav">
+                    <i class="bx bx-menu" aria-hidden="true"></i>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+    </header>
 
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <div class="heading">
-            <h2>Skills</h2>
-            <span>The domains in which I work</span>
-        </div>
-
-        <div class="skills-container">
-            <div class="bars">
-                <div class="bars-box">
-                    <h3>Cloud Computing (GCP/Azure)</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar back-bar"></div>
+    <main id="main">
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">AI Engineer · Modak Analytics</p>
+                    <h1>Hi, I'm <span class="text-gradient">Sudhanshu Sakhala</span></h1>
+                    <p class="hero-lead">
+                        I architect and ship <strong>production Agentic AI</strong> — LangGraph multi-agent systems,
+                        RAG &amp; memory, MCP tool platforms, and FastAPI services with streaming, observability, and
+                        cost controls.
+                    </p>
+                    <p class="hero-sub">
+                        <span class="mono-label">Currently</span>
+                        <span class="typed-wrap">Building <span class="auto-type"></span></span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn btn-primary">View experience</a>
+                        <a href="Sudhanshu_sakhala.pdf" class="btn btn-secondary" download>Download resume</a>
+                        <a href="https://linkedin.com/in/sudhanshu-sakhala-800444191" class="btn btn-ghost"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/sidsakhala" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                        <a href="mailto:sudhanshu.sakhala2002@gmail.com" aria-label="Email"><i
+                                class="bx bx-envelope"></i></a>
+                        <a href="tel:+917744869769" aria-label="Phone"><i class="bx bx-phone"></i></a>
+                    </div>
                 </div>
-
-                <div class="bars-box">
-                    <h3>Infrastructure as Code (Terraform)</h3>
-                    <span>75%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar python-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3>Automation & Scripting</h3>
-                    <span>70%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar ml-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3>Linux & Networking</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar dbms-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3>Dynatrace & Splunk</h3>
-                    <span>90%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar java-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3>Containerization & Orchestration</h3>
-                    <span>85%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar javascript-bar"></div>
+                <div class="hero-visual reveal" style="--delay: 0.1s">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <span class="status-dot"></span>
+                            <span class="mono-label">focus / production ai</span>
+                        </div>
+                        <ul class="hero-metrics">
+                            <li><strong>Agentic</strong> workflows</li>
+                            <li><strong>6+</strong> LLM providers</li>
+                            <li><strong>Hybrid</strong> RAG stacks</li>
+                            <li><strong>FastAPI</strong> + streaming</li>
+                        </ul>
+                        <p class="hero-card-foot">LangGraph · pgvector · Langfuse · FastAPI</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="skills-img">
-                <img src="123.png" alt="" />
+        <section class="metrics section" aria-label="Impact highlights">
+            <div class="container metrics-grid">
+                <article class="metric-card reveal">
+                    <span class="metric-value">~93%</span>
+                    <span class="metric-label">Agent context reduction</span>
+                </article>
+                <article class="metric-card reveal" style="--delay: 0.05s">
+                    <span class="metric-value">65%</span>
+                    <span class="metric-label">Lower token usage</span>
+                </article>
+                <article class="metric-card reveal" style="--delay: 0.1s">
+                    <span class="metric-value">70–80%</span>
+                    <span class="metric-label">LLM cost savings</span>
+                </article>
+                <article class="metric-card reveal" style="--delay: 0.15s">
+                    <span class="metric-value">2+</span>
+                    <span class="metric-label">Years in production AI</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container narrow reveal">
+                <header class="section-header">
+                    <span class="section-tag">About</span>
+                    <h2>Production AI, not demos</h2>
+                </header>
+                <p class="prose">
+                    AI Engineer with <strong>2+ years</strong> architecting and deploying production-grade Agentic AI
+                    systems, LLM applications, and enterprise AI platforms. Deep experience in LangGraph, LangChain,
+                    MCP, RAG, LLM orchestration, context engineering, AI memory, and PostgreSQL/pgvector.
+                </p>
+                <p class="prose">
+                    I've integrated <strong>6+ LLM providers</strong>, built MCP-backed agent platforms, and delivered
+                    scalable FastAPI services with SSE streaming, observability, RBAC, and reliability controls —
+                    consistently cutting context, tokens, and inference cost through intentional system design.
+                </p>
+                <dl class="info-grid">
+                    <div>
+                        <dt>Location</dt>
+                        <dd>Hyderabad, India (Hybrid)</dd>
+                    </div>
+                    <div>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:sudhanshu.sakhala2002@gmail.com">sudhanshu.sakhala2002@gmail.com</a></dd>
+                    </div>
+                    <div>
+                        <dt>Phone</dt>
+                        <dd><a href="tel:+917744869769">+91 77448 69769</a></dd>
+                    </div>
+                    <div>
+                        <dt>Education</dt>
+                        <dd>MCA, MIT WPU · CGPA 8.46</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="experience">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-tag">Experience</span>
+                    <h2>Where I've shipped impact</h2>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <time datetime="2024-11">Nov 2024 — Present</time>
+                            <span class="pill">Hybrid · Hyderabad</span>
+                        </div>
+                        <h3>AI Engineer · Modak Analytics</h3>
+                        <p class="timeline-note">Day-to-day product work is confidential; summaries below describe
+                            responsibilities and technical themes only.</p>
+                        <ul class="timeline-list">
+                            <li>Design and ship production agentic AI systems with LangGraph, MCP, and FastAPI.</li>
+                            <li>Build multi-agent workflows with context isolation, dynamic tool selection, and token
+                                optimization.</li>
+                            <li>Implement hybrid RAG and memory layers using PostgreSQL, pgvector, BM25, fusion, and
+                                reranking.</li>
+                            <li>Integrate multiple LLM providers with routing, failover, prompt caching, and cost controls.</li>
+                            <li>Own observability, golden-set evaluation, SSE streaming, auth/RBAC, and reliability
+                                patterns for agent services.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="github-work">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-tag">Public work</span>
+                    <h2>GitHub &amp; personal projects</h2>
+                    <p class="section-note">Employer product work stays off this site. What you can explore publicly is on
+                        GitHub.</p>
+                </header>
+                <div class="github-cta reveal">
+                    <div>
+                        <h3>Open source &amp; experiments</h3>
+                        <p class="prose">Agent demos, RAG samples, and learning projects live on my GitHub profile. Link
+                            specific repos here when you want them highlighted.</p>
+                    </div>
+                    <a href="https://github.com/sidsakhala" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer">View GitHub profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="section-tag">Skills</span>
+                    <h2>Technical stack</h2>
+                </header>
+                <div class="skills-grid">
+                    <div class="skill-group reveal">
+                        <h3>AI &amp; LLM Engineering</h3>
+                        <ul class="tag-list">
+                            <li>Agentic AI</li>
+                            <li>LangChain</li>
+                            <li>LangGraph</li>
+                            <li>MCP</li>
+                            <li>RAG</li>
+                            <li>ReAct Agents</li>
+                            <li>Tool Calling</li>
+                            <li>Prompt Engineering</li>
+                            <li>Context Management</li>
+                            <li>Token Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal" style="--delay: 0.05s">
+                        <h3>Backend &amp; Infrastructure</h3>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                            <li>AsyncIO</li>
+                            <li>Pydantic</li>
+                            <li>Microservices</li>
+                            <li>RBAC</li>
+                            <li>Rate Limiting</li>
+                            <li>SSE Streaming</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal" style="--delay: 0.1s">
+                        <h3>Data &amp; Retrieval</h3>
+                        <ul class="tag-list">
+                            <li>PostgreSQL</li>
+                            <li>pgvector</li>
+                            <li>Redis</li>
+                            <li>MongoDB</li>
+                            <li>PySpark</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal" style="--delay: 0.15s">
+                        <h3>Cloud &amp; Observability</h3>
+                        <ul class="tag-list">
+                            <li>Azure</li>
+                            <li>GCP</li>
+                            <li>AWS</li>
+                            <li>Databricks</li>
+                            <li>Langfuse</li>
+                            <li>CI/CD</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="container narrow reveal">
+                <header class="section-header">
+                    <span class="section-tag">Education</span>
+                    <h2>Academic background</h2>
+                </header>
+                <article class="edu-card">
+                    <div>
+                        <h3>Master of Computer Application (MCA)</h3>
+                        <p class="edu-school">Dr. Vishwanath Karad MIT World Peace University, Pune</p>
+                    </div>
+                    <div class="edu-meta">
+                        <time datetime="2022-08/2024-08">Aug 2022 — Aug 2024</time>
+                        <span class="pill">CGPA 8.46 / 10</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="contact">
+            <div class="container contact-grid">
+                <div class="reveal">
+                    <header class="section-header section-header-left">
+                        <span class="section-tag">Contact</span>
+                        <h2>Let's build something reliable</h2>
+                    </header>
+                    <p class="prose">
+                        Open to AI engineering roles, agent platform work, and collaborations on production LLM systems.
+                        Email is the best first touch; WhatsApp is optional for a quick follow-up.
+                    </p>
+                    <ul class="contact-links">
+                        <li>
+                            <i class="bx bx-envelope"></i>
+                            <a href="mailto:sudhanshu.sakhala2002@gmail.com">sudhanshu.sakhala2002@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-phone"></i>
+                            <a href="tel:+917744869769">+91 77448 69769</a>
+                        </li>
+                        <li>
+                            <i class="bx bxl-linkedin"></i>
+                            <a href="https://linkedin.com/in/sudhanshu-sakhala-800444191" target="_blank"
+                                rel="noopener noreferrer">LinkedIn profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact-form reveal" style="--delay: 0.1s" id="contact-form" novalidate>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required />
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com"
+                        required />
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="I'd like to discuss…"
+                        required></textarea>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" data-action="email">Send email</button>
+                        <button type="button" class="btn btn-secondary" id="whatsapp-btn">WhatsApp instead</button>
+                    </div>
+                    <p class="form-hint">Email opens your mail app with a pre-filled message. No backend required.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Sudhanshu Sakhala · AI Engineer</p>
+            <div class="footer-social">
+                <a href="https://github.com/sidsakhala" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://linkedin.com/in/sudhanshu-sakhala-800444191" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="heading">
-            <h2>Services</h2>
-            <span>My Services</span>
-        </div>
-
-        <div class="services-content">
-            <div class="services-box">
-                <i class="bx bx-code-alt"></i>
-                <h3>Cloud Infrastructure & Automation</h3>
-                <a href="#">Learn More</a>
-            </div>
-
-            <div class="services-box">
-                <i class="bx bx-code-alt"></i>
-                <h3>CI/CD Pipeline Engineering</h3>
-                <a href="#">Learn More</a>
-            </div>
-
-            <div class="services-box">
-                <i class="bx bx-server"></i>
-                <h3>Cloud-Native Application Deployment</h3>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="heading">
-            <h2>Contact</h2>
-            <span>Connect with me</span>
-        </div>
-
-        <div class="contact-form">
-            <div class="info-box">
-                <i class="bx bxs-user"></i>
-                <span>Sudhanshu Sakhala</span>
-            </div><br />
-
-            <div class="info-box">
-                <i class="bx bxs-phone"></i>
-                <span>+91-7744869769</span>
-            </div><br />
-
-            <div class="info-box">
-                <i class="bx bxs-conversation"></i>
-                <span>sudhanshu.sakhala2002@gmail.com</span>
-            </div><br />
-
-            <div class="info-box">
-                <i class="bx bxs-map"></i>
-                <span>Ahilyanagar</span>
-            </div><br /><br />
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.487549345552!2d74.72649407387574!3d19.102936051128946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb1da38fb7de1%3A0xa0825b981082b980!2sArabella%20By%20Marc!5e1!3m2!1sen!2sin!4v1766581775327!5m2!1sen!2sin"
-                width="362"
-                height="250"
-                style="border: 0;"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-box">
-            <input type="text" id="name" placeholder="Your Name" />
-            <textarea id="message" placeholder="Your Message"></textarea>
-            <button onclick="sendWhatsApp()" class="btn">Send</button>
-        </div>
-    </section>
-
-    <script>
-        function sendWhatsApp() {
-            const name = document.getElementById("name").value.trim();
-            const msg = document.getElementById("message").value.trim();
-
-            if (!name || !msg) {
-                alert("Please fill all fields");
-                return;
-            }
-
-            const phoneNumber = "+91-7744869769";
-            const text = `Hello, I am ${name}.%0A%0A${msg}`;
-            window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
-        }
-    </script>
-
-    <!-- Footer -->
-    <div class="footer">
-        <h2>Reach to me</h2>
-        <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=100007208868447">
-                <i class="bx bxl-facebook"></i>
-            </a>
-            <a href="https://instagram.com/isu.dhanshu">
-                <i class="bx bxl-instagram"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="copyright">
-        <p>Create By <a href="https://instagram.com/sudhanxu__">Sudhanshu Sakhala</a> | MIT WPU Pune</p>
-    </div>
-
-    <!-- JS -->
-    <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["A Software Engineer", "A Devops Engineer"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-    </script>
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
