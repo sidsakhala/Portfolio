@@ -97,12 +97,28 @@
         return true;
     }
 
+    const MAILTO_MAX_LENGTH = 2000;
+
     function openEmailClient({ name, email, message }) {
         const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
         const body = encodeURIComponent(
             `Hi Sudhanshu,\n\n${message}\n\n— ${name}\n${email}`
         );
-        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+        const href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+        if (href.length > MAILTO_MAX_LENGTH) {
+            alert(
+                "Your message is too long for the email link. Please shorten it or email sudhanshu.sakhala2002@gmail.com directly."
+            );
+            return;
+        }
+
+        const link = document.createElement("a");
+        link.href = href;
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
     function openWhatsApp({ name, message }) {

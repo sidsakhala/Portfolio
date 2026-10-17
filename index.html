@@ -366,12 +366,13 @@
                         required />
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="I'd like to discuss…"
-                        required></textarea>
+                        maxlength="1200" required></textarea>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary" data-action="email">Send email</button>
                         <button type="button" class="btn btn-secondary" id="whatsapp-btn">WhatsApp instead</button>
                     </div>
-                    <p class="form-hint">Email opens your mail app with a pre-filled message. No backend required.</p>
+                    <p class="form-hint">Opens your mail app with a draft to me — press <strong>Send</strong> there to
+                        deliver the message (this site does not send mail on its own).</p>
                 </form>
             </div>
         </section>
